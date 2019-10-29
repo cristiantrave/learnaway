@@ -7,3 +7,7 @@
 /api/var/
 /api/vendor/
 ###< learnaway-api symfony/framework-bundle ###
+
+###> symfony/web-server-bundle ###
+/api/.web-server-pid
+###< symfony/web-server-bundle ###

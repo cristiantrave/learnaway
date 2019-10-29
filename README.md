@@ -2,35 +2,22 @@
 
 LearnAway is a tool to facilitate the self-learning created by two technology enthusiasts, who live far from each other but linked by the passion for programming.
 
-## Requirements
+## learnaway-api
 
-LearnAway api requires php and composer:
+### Requirements
 
-### PHP
+Requires docker
 
-```
-sudo apt update && sudo apt install wget php-cli php-zip unzip curl
-```
-### Composer
-```
-curl -sS https://getcomposer.org/installer |php
-sudo mv composer.phar /usr/local/bin/composer
-```
-
-### Installing api dependencies
+### Deploy
 
 ```
-cd api/
-composer install
+docker build -t <image> .
+docker run --network host <image>
 ```
 
-## Run learnaway API
-```
-cd api/
-php bin/console server:start
-```
+The app is in localhost:8080
 
-## Test API listing items method
+### Test API listing items method
 
 ```
 /api/items
